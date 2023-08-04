@@ -216,7 +216,7 @@ figure {
             color: #2c98f0; }
 
 .container-wrap {
-  max-width: 1170px;
+  max-width: 80vw;
   margin: 0 auto; }
 
 #colorlib-main {
@@ -293,7 +293,7 @@ figure {
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1, #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
           margin: 0;
           padding: 0;
-          color: black;
+          color: white;
           font-family: "Playfair Display", Georgia, serif; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
           margin-bottom: 20px;
@@ -332,7 +332,7 @@ figure {
           border: none;
           font-weight: 400; }
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
-            color: #000;
+            color: white;
             border: 1px solid #000;
             background: transparent !important; }
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn:hover {
@@ -1427,3 +1427,45 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -164px;
+    background-color: #1772bd;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: -52px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: -52px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: -52px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
